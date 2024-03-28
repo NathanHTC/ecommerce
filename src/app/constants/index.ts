@@ -44,4 +44,5 @@ export const inclusions = [
     },
   ]
   
+  //hide header nav bar in this url
   export const noHeaderFooterUrls = ['/create-account', '/login', '/recover-password']

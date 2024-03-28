@@ -19,7 +19,7 @@ const HeaderComponent = ({ header }: { header: Header}) => {
       && classes.hide]
       .filter(Boolean)
       .join(" ")
-                    }>
+      }>
         <Gutter>
             <Link href="/">
                 <Image src="/logo-black.svg" alt="logo" width={170} height={50}/>
