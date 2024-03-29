@@ -19,8 +19,13 @@ const FooterComponent = () => {
             <li key={inclusion.title}>
               <Image 
                 src={inclusion.icon}
-                alt='icon'
+                alt={inclusion.title}
+                width={36}
+                height={36}
+                className={classes.icon}
               />
+
+              <h5>{inclusion.title}</h5>
             </li>
           ))}
         </ul>
