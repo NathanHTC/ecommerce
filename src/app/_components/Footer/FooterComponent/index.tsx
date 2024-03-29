@@ -46,7 +46,7 @@ const FooterComponent = () => {
                   <Image src="/logo-white.svg" alt='logo' width={170} height={50}/>
                 </Link>
                 <p>
-                  {Footer.copyright}
+                  {/* {footer.copyright} */}
                 </p>
               </div>
             </Gutter>
