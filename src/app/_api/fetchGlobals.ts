@@ -27,6 +27,8 @@ export async function fetchSettings(): Promise<Settings> {
   return settings
 }
 
+//fetch header using graphql and send to header component
+//we have home and shop header link shown for now
 export async function fetchHeader(): Promise<Header> {
   if (!GRAPHQL_API_URL) throw new Error('NEXT_PUBLIC_SERVER_URL not found')
 
