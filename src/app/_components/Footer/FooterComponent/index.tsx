@@ -6,9 +6,9 @@ import { Gutter } from '../../Gutter'
 import classes from './index.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Footer } from '..'
+import { Footer } from '../../../../payload/payload-types'
 
-const FooterComponent = () => {
+const FooterComponent = ({ footer } : { footer: Footer }) => {
   const pathname = usePathname();
   return (
     <footer className={
