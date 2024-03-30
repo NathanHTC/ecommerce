@@ -18,3 +18,21 @@
   }
 }
 
+.formTitle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+
+  h3 {
+    margin: 0;
+
+    @include mid-break {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+
+
