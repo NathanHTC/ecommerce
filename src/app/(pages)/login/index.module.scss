@@ -1,9 +1,20 @@
-@import "../../_css/common";
+@import '../../_css/common';
 
 .login {
-  margin-bottom: var(--block-padding);
+  display: grid;
+  grid-template-columns: 1fr 45%;
+  height: 100vh;
+
+  @include mid-break {
+    grid-template-columns: 1fr;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/assets/images/image-1.svg');
+  }
+
+  p {
+    color: var(--color-gray-500);
+  }
 }
 
-.params {
-  margin-top: var(--base);
-}
