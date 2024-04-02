@@ -40,7 +40,7 @@ export default async function Login() {
               height={30}
             />
           </div>
-          <p>Please Login here</p>
+          <p>Please Login here.</p>
 
           <LoginForm />
         </div>
