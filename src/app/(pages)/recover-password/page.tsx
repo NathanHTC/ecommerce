@@ -51,5 +51,6 @@ export const metadata: Metadata = {
   openGraph: mergeOpenGraph({
     title: 'Recover Password',
     url: '/recover-password',
+    
   }),
 }
