@@ -15,28 +15,20 @@ export default async function RecoverPassword() {
     <section className={classes.RecoverPassword}>
       <div className={classes.heroImg}>
         <Link href="/">
-          <Image 
-            src="logo-black.svg"
-            alt="logo"
-            width={250}
-            height={23}
-            className={classes.logo}
-          /> 
+          <Image src="logo-black.svg" alt="logo" width={250} height={23} className={classes.logo} />
         </Link>
       </div>
       <div className={classes.formWrapper}>
         <div className={classes.formContainer}>
           <RenderParams className={classes.params} />
-          <Link href="/login" className={classes.backLink}/>
+          <Link href="/login" className={classes.backLink} />
           <div className={classes.formTitle}>
             <h3>Forgot Password</h3>
-            
           </div>
 
           <RecoverPasswordForm />
         </div>
       </div>
-
     </section>
   )
 }
@@ -47,6 +39,5 @@ export const metadata: Metadata = {
   openGraph: mergeOpenGraph({
     title: 'Recover Password',
     url: '/recover-password',
-    
   }),
 }

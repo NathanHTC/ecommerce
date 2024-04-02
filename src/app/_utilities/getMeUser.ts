@@ -3,7 +3,6 @@ import { redirect } from 'next/navigation'
 
 import type { User } from '../../payload/payload-types'
 
-
 //if JWT is valid and user is retrieved, redirect valid
 export const getMeUser = async (args?: {
   nullUserRedirect?: string
