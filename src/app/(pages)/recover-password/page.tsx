@@ -30,6 +30,7 @@ export default async function RecoverPassword() {
           <Link href="/login" className={classes.backLink}/>
           <div className={classes.formTitle}>
             <h3>Forgot Password</h3>
+            {/*  */}
           </div>
 
           <RecoverPasswordForm />
