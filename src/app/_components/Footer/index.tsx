@@ -21,6 +21,7 @@ export async function Footer() {
   return (
    <>
     <FooterComponent footer={footer}/>
+    {/*  */}
    </>
   )
 }
