@@ -1,6 +1,6 @@
 import { PRODUCT } from './products'
 
-export const ORDERS = `
+export const ORDERS = `#graphql
   query Orders {
     Orders(limit: 300) {
       docs {
@@ -10,7 +10,7 @@ export const ORDERS = `
   }
 `
 
-export const ORDER = `
+export const ORDER = `#graphql
   query Order($id: String ) {
     Orders(where: { id: { equals: $id}}) {
       docs {

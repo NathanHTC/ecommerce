@@ -1,4 +1,4 @@
-export const MEDIA_FIELDS = `
+export const MEDIA_FIELDS = `#graphql
 mimeType
 filename
 width
@@ -7,6 +7,7 @@ alt
 caption
 `
 
-export const MEDIA = `media {
+export const MEDIA = `#graphql
+media {
   ${MEDIA_FIELDS}
 }`

@@ -1,6 +1,7 @@
 import { CART } from './cart'
 
-export const ME_QUERY = `query {
+export const ME_QUERY = `#graphql
+query {
   meUser {
     user {
       id
