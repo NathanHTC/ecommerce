@@ -60,9 +60,14 @@ export default async function Page({ params: { slug = 'home' } }) {
     //react fragment used to group page contents without added extra node to dom
     <React.Fragment>
       {slug === 'home' ? (
-        <Gutter>
+        <section>
           <Hero {...hero} />
-        </Gutter>
+          
+          <Gutter>
+            {/* Categories */}
+          </Gutter>
+        </section>
+
       ) : (
         <>
           <Hero {...hero} />
