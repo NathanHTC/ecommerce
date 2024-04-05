@@ -1,4 +1,5 @@
-export const CATEGORIES = `categories {
+export const CATEGORIES = `
+categories {
   title
   id
   breadcrumbs {
