@@ -16,3 +16,13 @@
     }
 }
 
+.list {
+    display: grid;
+    gap: 30px;
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
+  
+    @include small-break {
+      grid-template-columns: 1fr;
+    }
+  }
