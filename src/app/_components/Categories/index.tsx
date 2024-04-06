@@ -1,8 +1,12 @@
 import React from 'react'
+import { Category } from '../../../payload/payload-types'
+import classes from './index.module.scss'
 
-const Categories = () => {
+const Categories = (categories: Category) => {
   return (
-    <div>Categories</div>
+    <section className={}>
+
+    </section>
   )
 }
 
