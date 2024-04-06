@@ -1,9 +1,20 @@
+import Link from 'next/link'
 import React from 'react'
+import { Category } from '../../../../payload/payload-types'
+import classes from './index.module.scss'
 
-const index = () => {
+type CategoryCardProps = {
+    category: Category
+}
+const CategoryCard = ({ category }: CategoryCardProps) => {
   return (
-    <div>index</div>
+    <Link
+        href="/products"
+        className={classes.card}
+    >
+        <p className={classes.title}>{category.title}</p>
+    </Link>
   )
 }
 
-export default index
+export default CategoryCard
