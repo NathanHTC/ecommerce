@@ -4,8 +4,10 @@ import classes from './index.module.scss'
 
 const Categories = (categories: Category) => {
   return (
-    <section className={}>
-
+    <section className={classes.container}>
+        <div className={classes.titleWrapper}>
+            <h3>Shop by Categories</h3>
+        </div>
     </section>
   )
 }

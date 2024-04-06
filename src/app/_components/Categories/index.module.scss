@@ -1,0 +1,18 @@
+@use '../../_css/queries.scss' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+        font-weight: 400;
+    }
+}
+
