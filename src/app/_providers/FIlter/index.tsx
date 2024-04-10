@@ -1,5 +1,5 @@
 'use client';
-import { createContext, ReactNode, useState } from 'react';
+import { createContext, ReactNode, useContext, useState } from 'react';
 
 export const INITIAL_FILTER_DATA = {
     category: [],
@@ -26,3 +26,5 @@ export const FIlterProvider = ({ children }: { children: React.ReactNode }) => {
         </FilterContext.Provider>
     )
 }
+
+export const useFilter = () => useContext(FilterContext)
