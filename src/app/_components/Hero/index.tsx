@@ -21,6 +21,6 @@ export const Hero: React.FC<Page['hero']> = props => {
   const HeroToRender = heroes[type]
 
   if (!HeroToRender) return null
-
+  // conditional rendering
   return <HeroToRender {...props} />
 }
