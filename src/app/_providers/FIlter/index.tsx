@@ -1,8 +1,9 @@
 'use client';
 import { createContext, ReactNode, SetStateAction, useContext, useState } from 'react';
 
+//interface for type checking for provider and consumer*
 interface IContextType {
-    categoryFilters: []
+    categoryFilters: string[]
     setCategoryFilters: React.Dispatch<SetStateAction<string[]>>
     sort: string
     setSort: React.Dispatch<SetStateAction<string>>
@@ -11,13 +12,13 @@ interface IContextType {
 //using React Context API to create single data source
 //that is shared and subscribed by all children FC
 export const INITIAL_FILTER_DATA = {
-    category: [],
+    categoryFilters: [],
     setCategoryFilters: () => [],
     sort: '',
     setSort: () => '',
 }
 //step 1: create a FilterContext object
-const FilterContext = createContext(INITIAL_FILTER_DATA);
+const FilterContext = createContext<IContextType>(INITIAL_FILTER_DATA);
 
 export const FilterProvider = ({ children }: { children: React.ReactNode }) => {
     //useState and setter that we are going to pass to children prop
