@@ -13,6 +13,7 @@ type CategoryCardProps = {
 
 const CategoryCard = ({ category }: CategoryCardProps) => {
   const media = category.media as Media
+  //allow components to subscribe to filter state without prop drilling
   const { setCategoryFilters } = useFilter()
 
   return (
@@ -20,7 +21,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
       href="/products"
       className={classes.card}
       style={{ backgroundImage: `url(${media.url})` }}
-    //   onClick={() => setCategoryFilters([category.id])}
+      onClick={() => setCategoryFilters([category.id])}
     >
       <p className={classes.title}>{category.title}</p>
     </Link>
