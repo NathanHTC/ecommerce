@@ -1,16 +1,41 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from './index.module.scss'
 
 const Promotion = () => {
     //create a timer state for StatBox
-    //use useEffect to update timer every sec without rerendering
     const [time, setTime] = useState({
         days: 0,
         hours: 0,
         minutes: 0,
         seconds: 0,
     })
+    //use useEffect to update timer every sec without rerendering
+    useEffect(() => {
+        const targetDate = new Date('2024-06-25T00:00:00').getTime()
+
+        //called every sec 
+        const intervalId = setInterval(() => {
+            const now = new Date().getTime()
+            const distance = targetDate - now
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Update state
+            setTime({ days, hours, minutes, seconds });
+            
+            if(distance < 0){
+                clearInterval(intervalId)
+                setTime({ days:0, hours: 0, minutes: 0, seconds: 0 })
+            }
+        }, 1000)
+
+        return () => clearInterval(intervalId)
+    }, []) //empty dependency list, run Once when component is init rendered
     return (
         <section className={classes.promotion}>
             <div className={classes.textBox}>
