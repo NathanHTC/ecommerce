@@ -6,6 +6,7 @@ import { fetchDocs } from '../../_api/fetchDocs'
 import { Blocks } from '../../_components/Blocks'
 import CategoryCard from '../../_components/Categories/CategoryCard'
 import { Gutter } from '../../_components/Gutter'
+import { HR } from '../../_components/HR'
 import Filters from './Filters'
 import classes from './index.module.scss'
 
@@ -26,10 +27,12 @@ const Product = async () => {
     }
   return (
     <div className={classes.container}>
-        <Gutter>
+        <Gutter className={classes.products}>
             <Filters />
             <Blocks blocks={page.layout} disableTopPadding={true}/>
         </Gutter>
+        {/* an horizontal rule */}
+        <HR />
     </div>
   )
 }
