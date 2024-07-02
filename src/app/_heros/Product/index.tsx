@@ -24,12 +24,14 @@ export const ProductHero: React.FC<{
 
   return (
     <Gutter className={classes.productHero}>
+
       <div className={classes.mediaWrapper}>
         {!metaImage && <div className={classes.placeholder}>No image</div>}
         {metaImage && typeof metaImage !== 'string' && (
           <Media imgClassName={classes.image} resource={metaImage} fill />
         )}
       </div>
+
       <div className={classes.details}>
         <h3>{title}</h3>
         <div className={classes.categoryWrapper}>
@@ -54,24 +56,18 @@ export const ProductHero: React.FC<{
               return null
             })}
           </div>
+          <p className={classes.stock}>In Stock</p>
         </div>
-        <div className={classes.categoryWrapper}>
-
-        </div>
-
       </div>
-      <div>
-        <p className={classes.description}>
-          {`${description ? `${description} ` : ''}To edit this product, `}
-          <Link href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/products/${id}`}>
-            navigate to the admin dashboard
-          </Link>
-          {'.'}
-        </p>
-      </div>
+
       <Price product={product} button={false} />
-      <AddToCartButton product={product} className={classes.addToCartButton} />
 
+      <div className={classes.description}>
+        <h6>Description</h6>
+        <p>{description ? description : "No available"}</p>
+      </div>
+
+      <AddToCartButton product={product} className={classes.addToCartButton} />
 
     </Gutter>
 
