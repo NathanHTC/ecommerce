@@ -14,6 +14,7 @@ const Filters = ({ categories }: { categories: Category[] }) => {
     //if includes, filter out
     if(categoryFilters.includes(categoryId)){
       const updatedCategories = categoryFilters.filter(id => id !== categoryId)
+      setCategoryFilters(updatedCategories)
     } else {
       setCategoryFilters([...categoryFilters, categoryId])
     }
