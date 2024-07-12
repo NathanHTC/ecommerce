@@ -5,3 +5,8 @@
   cursor: pointer;
   @extend %label;
 }
+
+
+.removeFromCartButton:hover {
+  transform: scale(1.2);
+}

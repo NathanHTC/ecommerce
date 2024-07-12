@@ -48,7 +48,7 @@ export const ProductHero: React.FC<{
                   <p key={index} className={classes.category}>
                     {titleToUse}
                     {!isLast && <Fragment>, &nbsp;</Fragment>}
-                    <span className={classes.separator}> | </span>
+                    <span className={classes.separator}>|</span>
                   </p>
                 )
               }
@@ -58,16 +58,16 @@ export const ProductHero: React.FC<{
           </div>
           <p className={classes.stock}>In Stock</p>
         </div>
+        <Price product={product} button={false} />
+
+        <div className={classes.description}>
+          <h6>Description</h6>
+          <p>{description ? description : "No available"}</p>
+        </div>
+
+        <AddToCartButton product={product} className={classes.addToCartButton} />
       </div>
 
-      <Price product={product} button={false} />
-
-      <div className={classes.description}>
-        <h6>Description</h6>
-        <p>{description ? description : "No available"}</p>
-      </div>
-
-      <AddToCartButton product={product} className={classes.addToCartButton} />
 
     </Gutter>
 
