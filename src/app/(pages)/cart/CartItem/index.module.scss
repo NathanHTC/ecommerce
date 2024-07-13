@@ -48,6 +48,10 @@
   }
 }
 
+.titleWrapper:hover {
+  overflow: visible;
+}
+
 .quantity {
   border: 1px solid var(--color-dark-500);
   display: grid;
