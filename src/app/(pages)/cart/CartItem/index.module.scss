@@ -63,7 +63,7 @@
   width: 100%;
   max-width: 120px;
   margin: 16px;
-
+  margin-top: 20px;
 }
 
 .quantityBtn {
@@ -89,6 +89,7 @@
 .subtotalWrapper {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 60px;
 
   @include small-break {

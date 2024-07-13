@@ -17,6 +17,7 @@ import { useCart } from '../../../_providers/Cart'
 import { useTheme } from '../../../_providers/Theme'
 import cssVariables from '../../../cssVariables'
 import { CheckoutForm } from '../CheckoutForm'
+import { CheckoutItem } from '../CheckoutItem'
 
 import classes from './index.module.scss'
 
@@ -105,42 +106,19 @@ export const CheckoutPage: React.FC<{
 
               if (!quantity) return null
 
-              const isLast = index === (cart?.items?.length || 0) - 1
-
               const metaImage = meta?.image
 
               return (
                 <Fragment key={index}>
-                  <div className={classes.row}>
-                    <div className={classes.mediaWrapper}>
-                      {!metaImage && <span className={classes.placeholder}>No image</span>}
-                      {metaImage && typeof metaImage !== 'string' && (
-                        <Media
-                          className={classes.media}
-                          imgClassName={classes.image}
-                          resource={metaImage}
-                          fill
-                        />
-                      )}
-                    </div>
-                    <div className={classes.rowContent}>
-                      {!stripeProductID && (
-                        <p className={classes.warning}>
-                          {'This product is not yet connected to Stripe. To link this product, '}
-                          <Link
-                            href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/products/${id}`}
-                          >
-                            edit this product in the admin panel
-                          </Link>
-                          {'.'}
-                        </p>
-                      )}
-                      <h6 className={classes.title}>{title}</h6>
-                      <Price product={product} button={false} quantity={quantity} />
-                    </div>
-                  </div>
-                  {!isLast && <HR />}
+                  <CheckoutItem 
+                    metaImage={metaImage}
+                    product={product}
+                    title={title}
+                    quantity={quantity}
+                    index={index}
+                  />
                 </Fragment>
+                
               )
             }
             return null
